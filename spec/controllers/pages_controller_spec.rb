@@ -16,7 +16,7 @@ describe PagesController do
     end
   end
 
-  describe "GET 'abot'" do
+  describe "GET 'about'" do
     it "should be successful" do
       get 'about'
       response.should be_success
