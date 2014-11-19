@@ -45,7 +45,6 @@ describe User do
 			 valid_email_user= User.new(@attr.merge(:email => add)) 
 			 valid_email_user.should be_valid
 			end
-
 	end
 
 	it "should reject invalid email addresses" do 
@@ -74,8 +73,6 @@ describe User do
 			@user = User.new( @attr)
 		end
 
-
-
 		it "should have a password attribute  " do 
 			@user.should respond_to(:password)
 		end
@@ -84,7 +81,6 @@ describe User do
  			@user.should respond_to(:password_confirmation)
 
 		end
-
 
 		describe "password validations" do 
 			it "should require a password" do 
@@ -137,7 +133,6 @@ describe User do
 			 		it "should return false if the password doesn't match" do 
 			 			@user.has_password?("invalid").should be_false
 			 		end
-
 			 	end
 
 			 	describe "the authenticate method" do 
@@ -158,14 +153,8 @@ describe User do
 			 		 it "should return the user on an email/password match " do 
 			 		 	User.authenticate( @attr[:email], @attr[:password]).should == @user
 			 		 end
-
 			 	end
-
 			 end
-
 		end
-
-
 	end
-
 end
