@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   		render 'new' 				#in case of failed access 
   	else 
   		sign_in user
-  		redirect_to user
+  		redirect_back_or user
   	end
   end
 
